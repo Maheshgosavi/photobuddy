@@ -1,0 +1,81 @@
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  .upload-shape{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .option{
+    padding-left: 1px;
+    display: inline-block;
+    background-color: red;
+  }
+  .upload-button input[type="file"] {
+    display: none;
+  }
+  
+  .upload-button label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .upload-button label:hover {
+    background-color: #0056b3;
+  }
+  
+  .image-frame {
+    width: 450px;
+    height: 450px;
+    border: 2px solid #ccc;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease; /* Smooth transition when changing shape */
+  }
+  
+  /* Rectangle (default) */
+  .rectangle {
+    clip-path: none; /* No clipping for a rectangle */
+  }
+  
+  /* Circle */
+  .circle {
+    clip-path: circle(50%);
+  }
+  
+  /* Heart shape */
+  .heart {
+    clip-path: path('M 150 0 C 120 -30 0 60 150 300 C 300 60 180 -30 150 0');
+  }
+  
+  /* Triangle */
+  .triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+  
+  /* Movable image styles */
+  .movable-image {
+    max-width: 150%;
+    max-height: 150%;
+    cursor: grab;
+    user-select: none;
+    transform-origin: center center;
+  }
+  
+  .movable-image:active {
+    cursor: grabbing;
+  }
+  
